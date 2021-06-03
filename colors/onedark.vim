@@ -154,14 +154,14 @@ let s:vertsplit = s:colors.vertsplit
 " }}}
 
 " Terminal Colors {{{
-
-let g:terminal_ansi_colors = [
-  \ s:black.gui, s:red.gui, s:green.gui, s:yellow.gui,
-  \ s:blue.gui, s:purple.gui, s:cyan.gui, s:white.gui,
-  \ s:visual_grey.gui, s:dark_red.gui, s:green.gui, s:dark_yellow.gui,
-  \ s:blue.gui, s:purple.gui, s:cyan.gui, s:comment_grey.gui
-\]
-
+if has("gui_running")
+  let g:terminal_ansi_colors = [
+    \ s:black.gui, s:red.gui, s:green.gui, s:yellow.gui,
+    \ s:blue.gui, s:purple.gui, s:cyan.gui, s:white.gui,
+    \ s:visual_grey.gui, s:dark_red.gui, s:green.gui, s:dark_yellow.gui,
+    \ s:blue.gui, s:purple.gui, s:cyan.gui, s:comment_grey.gui
+  \]
+endif
 " }}}
 
 " Syntax Groups (descriptions and ordering from `:h w18`) {{{
